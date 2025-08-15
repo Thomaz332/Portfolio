@@ -9,16 +9,16 @@ export function Contact() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2
-            className="text-4xl font-bold text-primary mb-12 text-center"
+            className="text-4xl font-bold text-primary mb-12"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
             Entre em Contato
           </h2>
-          <div className="flex justify-center">
-            <div className="space-y-8 max-w-md">
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-semibold text-card-foreground mb-4 text-center">Contate-me!</h3>
-                <p className="text-muted-foreground leading-relaxed text-center">
+                <h3 className="text-2xl font-semibold text-card-foreground mb-4">Contate-me!</h3>
+                <p className="text-muted-foreground leading-relaxed">
                   Estou sempre aberto a novas oportunidades e projetos.
                 </p>
               </div>
