@@ -11,7 +11,7 @@ export function About() {
           </h2>
           <div className="max-w-3xl mx-auto">
             <div className="space-y-6">
-              <p className="text-lg text-card-foreground leading-relaxed text-center">
+              <p className="text-lg text-card-foreground leading-relaxed text-justify">
                 Busco ingressar no mundo do desenvolvimento de software, seja front-end ou back-end, como estagiário.
                 Sou estudante de Ciência da Computação e desenvolvo projetos tanto na faculdade quanto no meu tempo
                 livre, sempre buscando ampliar meus conhecimentos. Comprometido com o trabalho em equipe, espero
@@ -29,7 +29,6 @@ export function About() {
               </div>
             </div>
           </div>
-          {/* </CHANGE> */}
         </div>
       </div>
     </section>
