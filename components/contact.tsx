@@ -1,34 +1,9 @@
 "use client"
 
 import type React from "react"
-
-import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin, Send, Linkedin, MessageCircle, Github } from "lucide-react"
+import { Mail, Phone, MapPin, Linkedin, MessageCircle, Github } from "lucide-react"
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Aqui você pode adicionar a lógica para enviar o formulário
-    console.log("Form submitted:", formData)
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
-
   return (
     <section id="contact" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
@@ -39,13 +14,12 @@ export function Contact() {
           >
             Entre em Contato
           </h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-8">
+          <div className="flex justify-center">
+            <div className="space-y-8 max-w-md">
               <div>
-                <h3 className="text-2xl font-semibold text-card-foreground mb-4">Vamos conversar!</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Estou sempre aberto a novas oportunidades e projetos interessantes. Entre em contato e vamos criar
-                  algo incrível juntos!
+                <h3 className="text-2xl font-semibold text-card-foreground mb-4 text-center">Contate-me!</h3>
+                <p className="text-muted-foreground leading-relaxed text-center">
+                  Estou sempre aberto a novas oportunidades e projetos.
                 </p>
               </div>
               <div className="space-y-4">
@@ -101,45 +75,6 @@ export function Contact() {
                 </div>
               </div>
             </div>
-            <Card className="bg-card border-border">
-              <CardHeader>
-                <CardTitle className="text-card-foreground">Envie uma mensagem</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <Input
-                    name="name"
-                    placeholder="Seu nome"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="bg-input border-border"
-                  />
-                  <Input
-                    name="email"
-                    type="email"
-                    placeholder="Seu email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="bg-input border-border"
-                  />
-                  <Textarea
-                    name="message"
-                    placeholder="Sua mensagem"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="bg-input border-border"
-                  />
-                  <Button type="submit" className="w-full bg-accent hover:bg-accent/90">
-                    <Send className="w-4 h-4 mr-2" />
-                    Enviar Mensagem
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
